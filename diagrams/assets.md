@@ -1,16 +1,5 @@
 ```mermaid
 classDiagram
-    class Pet{
-        - String name
-        - int age
-        + Pet(name: String, age: int)
-        + speak()
-    }
-
-```
-
-```mermaid
-classDiagram
     class Portfolio {
         - String name
         - String owner
