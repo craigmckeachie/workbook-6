@@ -22,7 +22,7 @@ Mermaid is an extension to markdown syntax that allows you to create diagrams.
 
 ## Examples
 
-## Lucid Chart
+### Lucid Chart
 - [Generic UML Class Diagram](https://lucid.app/lucidchart/520c2e2d-3533-4b54-ae43-0dee1ec82b19/view)
 - [Assets version 1](https://lucid.app/lucidchart/f126d093-b7f1-4ca6-ab2b-70df983742bd/view)
 - [Assets version 2](https://lucid.app/lucidchart/e7dc7493-14ec-4172-bc5b-750d2b439cdf/view)
