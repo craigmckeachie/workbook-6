@@ -3,6 +3,7 @@ package com.pluralsight.streams;
 import com.pluralsight.streams.model.Person;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Program {
@@ -15,8 +16,31 @@ public class Program {
 
         double averageAge = getAverageAge(people);
         System.out.println("Average age: " + averageAge);
+        
+        //get just the ages in a list
+        List<Integer> ages = getAges(people);
+
+        //Display the age of the oldest person in the list.
+        int oldestAge = Collections.max(ages);
+        System.out.println(oldestAge);
+
+        //  Display the age of the youngest person in the list.
+        int youngestAge = Collections.min(ages);
+        System.out.println(youngestAge);
 
 
+
+
+        //sort the people by age
+
+    }
+
+    private static List<Integer> getAges(List<Person> people) {
+        List<Integer> ages = new ArrayList<>();
+        for (Person person : people) {
+            ages.add(person.getAge());
+        }
+        return ages;
     }
 
     private static double getAverageAge(List<Person> people) {
