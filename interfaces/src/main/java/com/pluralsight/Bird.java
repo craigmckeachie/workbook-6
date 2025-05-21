@@ -6,4 +6,9 @@ public class Bird implements Flyable {
     public void fly() {
         System.out.println("The bird flaps its wings and takes off.");
     }
+
+    public void buildNest(){
+        System.out.println("Built a nest.");
+    }
+
 }
