@@ -13,15 +13,20 @@ public class Program {
         List<Person> matchingPeople = getPeopleByLastName(people, lastName);
         printPeople(matchingPeople);
 
+        double averageAge = getAverageAge(people);
+        System.out.println("Average age: " + averageAge);
+
+
+    }
+
+    private static double getAverageAge(List<Person> people) {
         int totalAge = 0;
         for (Person person : people) {
             // totalAge = totalAge + person.getAge();
             totalAge += person.getAge();
         }
         double averageAge = (double) totalAge / people.size();
-        System.out.println("Average age: " + averageAge);
-
-
+        return averageAge;
     }
 
     private static void printPeople(List<Person> people) {
