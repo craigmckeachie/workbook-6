@@ -5,7 +5,7 @@
   - is-a
   - can instantiate/create an instance
   - subclass cannot extend multiple classes
-  - share
+  - shares with subclasses
     - attributes (fields)
     - methods
 - Abstract Class
@@ -13,7 +13,7 @@
   - is-a
   - *cannot directly instantiate/create an instance*
   - subclass cannot extend multiple classes
-  - share
+  - shares with subclasses
     - attributes (fields)
     - methods
     - method signatures
@@ -23,7 +23,7 @@
   - can (promises implementors can do something)
   - can
   - cannot directly instantiate/create an instance
-  - share
+  - shares with subclasses
     - ~~attributes (fields)~~
     - method signatures
     - default methods
