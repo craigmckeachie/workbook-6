@@ -1,0 +1,30 @@
+# Review
+
+- Super Class
+  - extends
+  - is-a
+  - can instantiate/create an instance
+  - subclass cannot extend multiple classes
+  - share
+    - attributes (fields)
+    - methods
+- Abstract Class
+  - extends
+  - is-a
+  - *cannot directly instantiate/create an instance*
+  - subclass cannot extend multiple classes
+  - share
+    - attributes (fields)
+    - methods
+    - method signatures
+      - a method signature is a method with no body
+- Interface
+  - implements
+  - can (promises implementors can do something)
+  - can
+  - cannot directly instantiate/create an instance
+  - share
+    - ~~attributes (fields)~~
+    - method signatures
+    - default methods
+      - default methods are called if the method is not overriden in a subclass
