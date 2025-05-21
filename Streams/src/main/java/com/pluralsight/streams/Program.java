@@ -7,6 +7,32 @@ import java.util.List;
 
 public class Program {
     public static void main(String[] args) {
+        List<Person> people = getPeople();
+        
+        String lastName = "Williams";
+        List<Person> matchingPeople = getPeopleByLastName(people, lastName);
+
+        printPeople(matchingPeople);
+    }
+
+    private static void printPeople(List<Person> people) {
+        for (Person person : people) {
+            System.out.println(person);
+        }
+    }
+
+    private static List<Person> getPeopleByLastName(List<Person> people, String lastName) {
+        List<Person> matchingPeople = new ArrayList<>();
+
+        for (Person person : people) {
+            if(person.getLastName().equals(lastName)){
+                matchingPeople.add(person);
+            }
+        }
+        return matchingPeople;
+    }
+
+    private static List<Person> getPeople() {
         List<Person> people = new ArrayList<>();
 
         people.add(new Person("LeBron", "James", 39));
@@ -31,20 +57,6 @@ public class Program {
         people.add(new Person("Draymond", "Green", 34));
         people.add(new Person("Josh", "Green", 23));
         people.add(new Person("Trey", "Murphy", 24));
-
-
-        String lastName = "Williams";
-        List<Person> matchingPeople = new ArrayList<>();
-
-        for (Person person : people) {
-            if(person.getLastName().equals(lastName)){
-                matchingPeople.add(person);
-            }
-        }
-
-
-        for (Person person : matchingPeople) {
-            System.out.println(person);
-        }
+        return people;
     }
 }
