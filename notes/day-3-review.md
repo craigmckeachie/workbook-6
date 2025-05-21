@@ -1,5 +1,13 @@
 # Review
 
+
+- Class 
+  - has-a class, has-many other classes
+  - can instantiate/create an instance 
+  - has 
+    - attributes (fields)
+    - methods 
+ ----------------- 
 - Super Class
   - extends
   - is-a
