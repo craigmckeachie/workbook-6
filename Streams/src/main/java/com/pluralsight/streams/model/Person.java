@@ -11,6 +11,18 @@ public class Person {
         this.age = age;
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Person{");
