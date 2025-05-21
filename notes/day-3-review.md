@@ -21,8 +21,8 @@
 - Interface
   - implements
   - can (promises implementors can do something)
-  - can
   - cannot directly instantiate/create an instance
+   - subclasses CAN implement multiple interfaces
   - shares with subclasses
     - ~~attributes (fields)~~
     - method signatures
