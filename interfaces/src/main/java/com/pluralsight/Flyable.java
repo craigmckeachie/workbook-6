@@ -1,5 +1,7 @@
 package com.pluralsight;
 
 public interface Flyable {
-    void fly();
+    default void fly(){
+        System.out.println("Yippee, I'm flying!");
+    };
 }
