@@ -5,20 +5,23 @@ import com.pluralsight.streams.model.Person;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Program {
     public static void main(String[] args) {
         List<Person> people = getPeople();
+        System.out.println(people);
         
         String lastName = "Williams";
-        List<Person> matchingPeople = getPeopleByLastName(people, lastName);
+        List<Person> matchingPeople = getPeopleByLastName2(people, lastName);
         printPeople(matchingPeople);
 
-        double averageAge = getAverageAge(people);
+        double averageAge = getAverageAge2(people);
         System.out.println("Average age: " + averageAge);
 
         //get just the ages in a list
-        List<Integer> ages = getAges(people);
+        List<Integer> ages = getAges2(people);
+        System.out.println(ages);
 
         //Display the age of the oldest person in the list.
         int oldestAge = Collections.max(ages);
@@ -34,7 +37,7 @@ public class Program {
 
     }
 
-    private static List<Integer> getAges(List<Person> people) {
+    private static List<Integer> getAges1(List<Person> people) {
         List<Integer> ages = new ArrayList<>();
         for (Person person : people) {
             ages.add(person.getAge());
@@ -42,7 +45,20 @@ public class Program {
         return ages;
     }
 
-    private static double getAverageAge(List<Person> people) {
+    private static List<Integer> getAges2(List<Person> people) {
+        List<Integer> ages = people.stream()
+                .map(person -> person.getAge())
+                .collect(Collectors.toList());
+        return ages;
+    }
+
+    private static List<Integer> getAges3(List<Person> people) {
+        return people.stream()
+                .map(person -> person.getAge())
+                .collect(Collectors.toList());
+    }
+
+    private static double getAverageAge1(List<Person> people) {
         int totalAge = 0;
         for (Person person : people) {
             // totalAge = totalAge + person.getAge();
@@ -52,13 +68,21 @@ public class Program {
         return averageAge;
     }
 
+    private static double getAverageAge2(List<Person> people) {
+        double averageAge = people.stream()
+                            .mapToInt(person -> person.getAge())
+                            .average()
+                            .orElse(0.0);
+        return averageAge;
+    }
+
     private static void printPeople(List<Person> people) {
         for (Person person : people) {
             System.out.println(person);
         }
     }
 
-    private static List<Person> getPeopleByLastName(List<Person> people, String lastName) {
+    private static List<Person> getPeopleByLastName1(List<Person> people, String lastName) {
         List<Person> matchingPeople = new ArrayList<>();
 
         for (Person person : people) {
@@ -66,6 +90,13 @@ public class Program {
                 matchingPeople.add(person);
             }
         }
+        return matchingPeople;
+    }
+
+    private static List<Person> getPeopleByLastName2(List<Person> people, String lastName) {
+        List<Person> matchingPeople = people.stream()
+                                        .filter(person -> person.getLastName().equals(lastName))
+                                        .collect(Collectors.toList());
         return matchingPeople;
     }
 
