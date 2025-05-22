@@ -12,7 +12,6 @@ Morning:
   - Step 2
   - Step 3 (optional if time permits)
 - 4-3 Java Stream Methods
-
   - Overview
   - Demo or together: page 91 exercise rewrite People queries
   - Exercise: page 91 (if we don't do together)
