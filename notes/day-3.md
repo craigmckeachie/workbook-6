@@ -22,11 +22,5 @@
   - Step 1
   - Step 2
   - Step 3 (optional if time permits)
-- 4-2 Lambda Expressions
-  - Overview
-  - Demo: get some examples running in workbook for reference
-  - page 91 exercise 2
-  - Step 1
-  - Step 2
-  - Step 3 (optional if time permits)
-- LUNCH: Remember to do Self-Reflection Assignment
+
+  > Remember to do Self-Reflection Assignment
