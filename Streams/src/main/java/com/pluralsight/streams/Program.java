@@ -16,7 +16,7 @@ public class Program {
 
         double averageAge = getAverageAge(people);
         System.out.println("Average age: " + averageAge);
-        
+
         //get just the ages in a list
         List<Integer> ages = getAges(people);
 
@@ -28,10 +28,9 @@ public class Program {
         int youngestAge = Collections.min(ages);
         System.out.println(youngestAge);
 
-
-
-
         //sort the people by age
+
+
 
     }
 
